@@ -1,14 +1,24 @@
 package teoria;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Venta {
     private Date fecha;
     private String cliente;
+    private ArrayList<DetalleVenta> detalle;
 
     public Venta(Date fecha, String cliente) {
         this.fecha = fecha;
         this.cliente = cliente;
+    }
+
+    public ArrayList<DetalleVenta> getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(ArrayList<DetalleVenta> detalle) {
+        this.detalle = detalle;
     }
 
     public Date getFecha() {
