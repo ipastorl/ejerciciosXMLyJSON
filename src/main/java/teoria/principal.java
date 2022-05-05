@@ -1,7 +1,9 @@
 package teoria;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -34,6 +36,18 @@ public class principal {
 
         // convertir objeto compuesto con ArrayList a JSON
         System.out.println(gson.toJson(venta));
+        String json_completo = gson.toJson(venta);
+
+        // convertir un String JSON a objeto
+        Venta nuevaVenta = gson.fromJson(json_completo, Venta.class);
+        System.out.println(nuevaVenta);
+
+        // obtener un arraylist de manera independiente
+        String jsonArray = gson.toJson(detalles);
+        Type listType = new TypeToken<ArrayList<DetalleVenta>>() {}.getType();
+        ArrayList<DetalleVenta> arraydejson = gson.fromJson(jsonArray,listType);
+
+        System.out.println(arraydejson);
 
     }
 }

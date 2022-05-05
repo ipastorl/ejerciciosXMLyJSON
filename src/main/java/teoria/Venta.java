@@ -42,6 +42,7 @@ public class Venta {
         return "Venta{" +
                 "fecha=" + fecha +
                 ", cliente='" + cliente + '\'' +
+                ", detalle=" + detalle +
                 '}';
     }
 }
