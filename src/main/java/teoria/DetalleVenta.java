@@ -1,6 +1,7 @@
 package teoria;
 
 public class DetalleVenta {
+    private Integer id;
     private String producto;
     private Double importe, precioUnitario;
     private Integer cantidad;

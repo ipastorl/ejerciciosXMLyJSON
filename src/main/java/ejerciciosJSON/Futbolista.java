@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 public class Futbolista {
     // atributos de la clase
-    Integer dorsal;
-    String nombre, equipo;
-    ArrayList<Demarcacion> demarcaciones;
+    private Integer dorsal;
+    private String nombre, equipo;
+    private ArrayList<Demarcacion> demarcaciones;
 
     // constructor
     public Futbolista(Integer dorsal, String nombre, String equipo) {

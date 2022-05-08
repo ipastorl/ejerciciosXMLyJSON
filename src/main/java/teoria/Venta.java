@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Venta {
+    private Integer id;
     private Date fecha;
     private String cliente;
     private ArrayList<DetalleVenta> detalle;
