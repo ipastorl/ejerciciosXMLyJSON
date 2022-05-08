@@ -14,8 +14,4 @@ public interface DBFutbolistas {
     //https://my-json-server.typicode.com/chemaduran/futbolistas_api_demo/15
     @GET("futbolistas_api_demo/jugadores/{id}")
     Call<Jugador> getJugadorxDorsal(@Path("id") Integer id);
-
-    //https://my-json-server.typicode.com/chemaduran/futbolistas_api_demo/15/estadisticas
-    @GET("futbolistas_api_demo/jugadores/{id}")
-    Call<Estadisticas> getEstadisticasJugador(@Path("id") Integer id);
 }

@@ -38,6 +38,9 @@ public class Tarea6 {
             if(response.isSuccessful()){
                 jugador = response.body();
                 System.out.println(jugador);
+                assert jugador != null;
+                System.out.println("Estadísticas del jugador " + id + " :");
+                System.out.println(jugador.getEstadisticas());
             } else {
                 System.out.println("Petición no válida " + response.message());
             }
@@ -45,18 +48,5 @@ public class Tarea6 {
             System.out.println("Error en la petición " + e.getMessage());
         }
 
-        // Obtener las estadísticas de un jugador
-        System.out.println("Estadísticas del jugador " + id + " :");
-        try {
-            Response<Estadisticas> response = service.getEstadisticasJugador(id).execute();
-            if(response.isSuccessful()){
-                Estadisticas estadisticas = response.body();
-                System.out.println(estadisticas);
-            } else {
-                System.out.println("Petición no válida " + response.message());
-            }
-        } catch (IOException e) {
-            System.out.println("Error en la petición " + e.getMessage());
-        }
     }
 }
