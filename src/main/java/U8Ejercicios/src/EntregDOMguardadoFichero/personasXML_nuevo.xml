@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas info="personas" otro="ejemplo">
+        
+    <!--COMENTARIO AÑADIDO DESDE DOM-->
+    <persona id="5">
+        <nombre>Isabel Pastor</nombre>
+        <edad>47</edad>
+    </persona>
+        
+    <persona id="2">
+                
+        <nombre>María</nombre>
+                
+        <edad>51</edad>
+            
+    </persona>
+        
+    <persona id="3">
+                
+        <nombre>Raul</nombre>
+                
+        <edad>22</edad>
+            
+    </persona>
+    
+</personas>

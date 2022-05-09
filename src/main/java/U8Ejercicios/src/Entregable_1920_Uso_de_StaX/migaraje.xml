@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<migaraje>
+	<coche id="1">
+		<marca>Audi</marca>
+		<modelo>TT</modelo>
+		<año>2014</año>
+		<color>Rojo</color>
+	</coche>
+	<coche id="2">
+		<marca>Cadillac</marca>
+		<modelo>Escalade</modelo>
+		<año>2008</año>
+		<color>Gris</color>
+	</coche>
+	<coche id="3">
+		<marca>Volswagen</marca>
+		<modelo>T Roc</modelo>
+		<año>2021</año>
+		<color>Negro</color>
+	</coche>
+	<coche id="4">
+		<marca>Volswagen</marca>
+		<modelo>California</modelo>
+		<año>1967</año>
+		<color>Blanco, Naranja</color>
+	</coche>
+	<coche id="5">
+		<marca>Volvo</marca>
+		<modelo>XC40</modelo>
+		<año>2017</año>
+		<color>Negro</color>
+	</coche>
+	<coche id="6">
+		<marca>Aston Martin</marca>
+		<modelo>DB9</modelo>
+		<año>2016</año>
+		<color>Azul</color>
+	</coche>
+	<coche id="7">
+		<marca>Bentley</marca>
+		<modelo>Continental</modelo>
+		<año>2017</año>
+		<color>Beige</color>
+	</coche>
+	<coche id="8">
+		<marca>Rolls Royce</marca>
+		<modelo>wraith</modelo>
+		<año>2019</año>
+		<color>Negro</color>
+	</coche>
+	<coche id="9">
+		<marca>Tesla</marca>
+		<modelo>Y</modelo>
+		<año>2021</año>
+		<color>Blanco</color>
+	</coche>
+	<coche id="10">
+		<marca>Hummer</marca>
+		<modelo>H2</modelo>
+		<año>2018</año>
+		<color>Naranja</color>
+	</coche>
+</migaraje>
