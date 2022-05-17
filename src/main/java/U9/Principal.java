@@ -9,7 +9,8 @@ public class Principal {
 
         // Crear una conexion a una base de datos
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/classicmodels?user=programacion&password=programacion");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/classicmodels?user=programacion&password=programacion"
+                                        + "&userUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetime=false&serverTimezone=UTC");
             Statement statement = connection.createStatement();
             statement.setQueryTimeout(30); // tiempo de respuesta 30 secs
 
