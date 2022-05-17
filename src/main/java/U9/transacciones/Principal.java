@@ -8,6 +8,11 @@ public class Principal {
         Connection connection = ConnectionDataBase.getConnection();
 
         try{
+            // evitar no romper la lógica de negocio, con el autocommit a false, no se insertará nada,
+            // si no se ha terminado el bloque de código try entero,
+            // pero no se puede olvidar después hacer el connection.commit
+            connection.setAutoCommit(false);
+
             OfficeModel.insertOffice(
                     new Office(
                             "15",
@@ -36,7 +41,7 @@ public class Principal {
             System.out.println("Insertado empleado");
 
             // no olvidar hacer commit si no está el auto-commit
-            //connection.commit();
+            connection.commit();
 
 
 
@@ -46,6 +51,9 @@ public class Principal {
                 if (connection != null) {
                     System.out.println(
                             "Dejamos la BD en estado consistente. Ya se pueden hacer otros commits consistentemente.");
+
+                    // si en la transacción ha ocurrido un error, vuelve al estado anterior (borra) las insercciones
+                    // pendientes de commit que han quedado
                     connection.rollback();
                 }
             } catch (SQLException throwables) {
