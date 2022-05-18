@@ -77,6 +77,7 @@ public class ProcessPosts {
         pubDate.setTextContent(post.getPubdate());
 
         Element guid = doc.createElement("guid");
+        guid.setTextContent(post.getPubdate());
 
         //Construyo toda la estructura general de la etiqueta
         postElement.appendChild(saltoLinea);
