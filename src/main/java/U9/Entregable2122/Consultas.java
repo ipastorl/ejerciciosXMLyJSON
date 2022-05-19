@@ -23,9 +23,9 @@ import java.util.Scanner;
 public class Consultas {
 
     public static void main(String[] args) {
-       // FiltroPrecio();
-       // InfoPagos();
-        informeCategoria();
+       FiltroPrecio();
+       InfoPagos();
+       informeCategoria();
     }
 
     /**
