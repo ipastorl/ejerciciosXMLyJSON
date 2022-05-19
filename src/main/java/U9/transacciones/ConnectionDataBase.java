@@ -1,12 +1,12 @@
-/**
- * Una conexión para la BBDD classicmodels
- */
+
 package U9.transacciones;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+/**
+ * Una conexión para la BBDD classicmodels
+ */
 public class ConnectionDataBase {
     private static Connection connection = null;
 
@@ -19,7 +19,7 @@ public class ConnectionDataBase {
             if (connection == null){
                 connection = DriverManager.getConnection("jdbc:mysql://localhost/classicmodels?user=programacion&password=programacion"
                         + "&userUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetime=false&serverTimezone=UTC");
-                System.out.println("Connection successful");
+                System.out.println("Connexión establecida con éxito");
             }
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
