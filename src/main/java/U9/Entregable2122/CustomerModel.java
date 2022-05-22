@@ -32,7 +32,6 @@ public class CustomerModel {
         preparedStatement.setString(11, customer.getCountry());
         preparedStatement.setDouble(13,customer.getCreditLimit());
 
-
         preparedStatement.execute();
     }
 }

@@ -13,7 +13,7 @@ public class OfficeModel {
      * @param office
      * @throws SQLException
      */
-    public static Integer insertOffice(Office office) throws SQLException {
+    public static void insertOffice(Office office) throws SQLException {
         Integer rowsAffected = 0;
 
         Connection connection = ConnectionDataBase.getConnection();
@@ -32,8 +32,6 @@ public class OfficeModel {
         preparedStatement.setString(8, office.getPostalCode());
         preparedStatement.setString(9, office.getTerritory());
 
-        rowsAffected = preparedStatement.executeUpdate();
-
-        return rowsAffected;
+        preparedStatement.execute();
     }
 }

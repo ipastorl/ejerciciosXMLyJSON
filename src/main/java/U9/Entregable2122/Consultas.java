@@ -39,9 +39,10 @@ public class Consultas {
             Double precio = 0.0;
             System.out.println(" Introduzca un precio: ");
             precio = sc.nextDouble();
-            String consulta = "SELECT * FROM products WHERE buyPrice>" + precio;
-            PreparedStatement preparedStatement = null;
-            preparedStatement = connection.prepareStatement(consulta);
+            String consulta = "SELECT * FROM products WHERE buyPrice>?";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(consulta);
+            preparedStatement.setString(1,String.valueOf(precio));
             ResultSet resultset = preparedStatement.executeQuery();
             while (resultset.next()){
                 System.out.println(resultset.getString(1) + " "
@@ -66,10 +67,11 @@ public class Consultas {
             Integer numCliente = 0;
             System.out.println(" Introduzca el número del cliente a buscar : ");
             numCliente = sc.nextInt();
-            String consulta = "SELECT * FROM customers JOIN payments ON customers.customerNumber=payments.customerNumber WHERE customers.customerNumber=" + numCliente;
+            String consulta = "SELECT * FROM customers JOIN payments ON customers.customerNumber=payments.customerNumber " +
+                    "WHERE customers.customerNumber=?";
 
-            PreparedStatement preparedStatement = null;
-            preparedStatement = connection.prepareStatement(consulta);
+            PreparedStatement preparedStatement = connection.prepareStatement(consulta);
+            preparedStatement.setString(1,String.valueOf(numCliente));
             ResultSet resultset = preparedStatement.executeQuery();
 
 
@@ -100,9 +102,9 @@ public class Consultas {
                             "SELECT * " +
                             "FROM products JOIN orderdetails " +
                             "ON products.productCode=orderdetails.productCode " +
-                            "WHERE products.productLine like '" + categoria + "'; ";
-            PreparedStatement preparedStatement = null;
-            preparedStatement = connection.prepareStatement(consulta);
+                            "WHERE products.productLine like ?;";
+            PreparedStatement preparedStatement = connection.prepareStatement(consulta);
+            preparedStatement.setString(1,categoria);
             ResultSet resultset = preparedStatement.executeQuery();
 
             while (resultset.next()){

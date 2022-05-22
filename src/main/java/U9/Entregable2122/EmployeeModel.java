@@ -28,7 +28,6 @@ public class EmployeeModel {
         preparedStatement.setInt(7, employee.getReportsTo());
         preparedStatement.setString(8, employee.getJobTitle());
 
-
         preparedStatement.execute();
     }
 
