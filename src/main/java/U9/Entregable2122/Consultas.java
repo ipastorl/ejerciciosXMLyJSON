@@ -112,7 +112,6 @@ public class Consultas {
                         + resultset.getString("quantityOrdered") + " "
                         + resultset.getString("priceEach"));
             }
-
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }

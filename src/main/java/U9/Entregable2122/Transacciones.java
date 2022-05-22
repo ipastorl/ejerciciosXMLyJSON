@@ -104,6 +104,7 @@ public class Transacciones {
             try {
                 if (connection != null) {
                     connection.rollback();
+                    connection.close();
                 }
             } catch (SQLException sqlException1) {
                 sqlException1.printStackTrace();

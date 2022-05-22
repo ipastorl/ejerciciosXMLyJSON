@@ -11,7 +11,7 @@ public class LambdaEstudio {
 
     //3. Funciones
     //Aceptan un argumento y devuelven un valor como resultado y cuyos tipos no tienen porque ser iguales.
-    //Order persistedOrder -> persistedOrder.getIdientifier();
+    //OrderDetails persistedOrder -> persistedOrder.getIdientifier();
 
     //3.1 Operadores Unarios
     //Caso especial de funciones en las que tanto el parámetro como el valor devuelto son del mismo tipo.
