@@ -21,7 +21,7 @@ import java.util.Scanner;
  * Muestre por pantalla los datos del libro con más páginas.
  * Que muestre por pantalla el número de libros de una editorial determinada que se solicitará al usuario.
  */
-public class Ejercicio2 {
+public class ParserStax {
     public static String archivo = "ejercicio2.xml";
     public static void main(String[] args) {
 

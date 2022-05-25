@@ -23,7 +23,7 @@ import java.util.Scanner;
  * Inserte un nuevo nodo dentro de editorial que indique el país de origen de la editorial.
  * Escriba todo esto en un fichero llamado ejercicio2.xml
  */
-public class Ejercicio1 {
+public class Ejercicio1DOM {
 
     public static void main(String[] args) {
 

@@ -17,7 +17,7 @@ import java.util.List;
  * List<Office> MostrarOficinas() que devuelve una lista de oficina que se obtiene de la base de datos
  * y que será utilizada para mostrar toda esa información en formato JSON por pantalla.
  */
-public class Ejercicio3 {
+public class Consultas {
     public static void main(String[] args) {
         // obtener de la base de datos ClassicModels una lista de oficinas
         List<Office> oficinas = mostrarOficinas();
