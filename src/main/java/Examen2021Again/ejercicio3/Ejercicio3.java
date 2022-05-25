@@ -58,6 +58,8 @@ public class Ejercicio3 {
                         , resultSet.getString(9));
                 // Se añade a la lista de oficinas
                 oficinas.add(of);
+                ////// ¡ IMPORTANTE CERRAR LA CONEXIÓN !!!! //////
+                connection.close();
             }
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
