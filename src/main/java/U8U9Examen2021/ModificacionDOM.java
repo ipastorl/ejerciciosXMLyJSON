@@ -23,14 +23,14 @@ public class ModificacionDOM {
         // crear libro nuevo pidiendo datos a usuario
         Libro libro = crearLibro();
 
-        String ficheroBiliboteca = "biblioteca.xml";
-        String ficheroEjercicio2 = "ejercicio2.xml";
+        String ficheroEntrada = "biblioteca.xml";
+        String ficheroSalida = "ejercicio2.xml";
         try {
             //Obtenemos la referencia al objeto Document
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             //Parseamos el documento XML para tenerlo en memoria cargado
-            Document doc = db.parse(new File(ficheroBiliboteca));
+            Document doc = db.parse(new File(ficheroEntrada));
             //Obtenemos el nodo raíz
             Node root = doc.getDocumentElement();
             //Nodo texto de salto de línea que voy a utilizar posteriormente
@@ -38,7 +38,7 @@ public class ModificacionDOM {
             anyadirLibro(libro, doc, root);
 
 
-            arbolAFichero(ficheroEjercicio2, root);
+            arbolAFichero(ficheroSalida, root);
 
         } catch (ParserConfigurationException | SAXException | TransformerException | IOException e) {
             e.printStackTrace();
@@ -78,26 +78,20 @@ public class ModificacionDOM {
      * @throws TransformerException
      */
     private static void arbolAFichero(String ficheroSalida, Node root) throws TransformerException {
-        //Obtenemos el objeto transformer
+
         TransformerFactory tf = TransformerFactory.newInstance();
         Transformer transformer = tf.newTransformer();
 
-        //Configuración del transformer
-        //Podéis ver toda la lista de propiedes aquí
-        // https://docs.oracle.com/javase/7/docs/api/javax/xml/transform/OutputKeys.html
         transformer.setOutputProperty( OutputKeys.INDENT, "yes" );
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
         transformer.setOutputProperty( OutputKeys.OMIT_XML_DECLARATION, "no" );
         transformer.setOutputProperty( OutputKeys.METHOD, "xml" );
         transformer.setOutputProperty("http://www.oracle.com/xml/is-standalone", "yes");
-
-        //Creación del origen DOMSource
+        // el nodo root es el "source"
         DOMSource domSource = new DOMSource(root);
-
-        //Creación del fichero que va a ser mi destino
+        // fichero salida donde se va a guardar
         StreamResult streamResult = new StreamResult(new File(ficheroSalida));
 
-        //Hacemos la transformación que en nuestro caso es la escritura
         transformer.transform(domSource,streamResult);
     }
 

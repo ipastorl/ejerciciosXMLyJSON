@@ -1,73 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <biblioteca>
-    	
+        
     <libro>
-        		
+                
         <titulo>El Quijote</titulo>
-        		
+                
         <autor>Cervantes</autor>
-        		
+                
         <editorial>Anaya</editorial>
-        		
+                
         <paginas>500</paginas>
-        	
+            
     </libro>
-    	
+        
     <libro>
-        		
+                
         <titulo>La Metamorfosis</titulo>
-        		
+                
         <autor>Frank Kafka</autor>
-        		
+                
         <editorial>Anagrama</editorial>
-        		
+                
         <paginas>250</paginas>
-        	
+            
     </libro>
-    	
+        
     <libro>
-        		
+                
         <titulo>1984</titulo>
-        		
+                
         <autor>Geoge Orwell</autor>
-        		
+                
         <editorial>Edelvives</editorial>
-        		
+                
         <paginas>125</paginas>
-        	
+            
     </libro>
-    	
+        
     <libro>
-        		
+                
         <titulo>Un mundo feliz</titulo>
-        		
+                
         <autor>Aldous Huxley</autor>
-        		
+                
         <editorial>Anaya</editorial>
-        		
+                
         <paginas>200</paginas>
-        	
+            
     </libro>
-    	
+        
     <libro>
-        		
+                
         <titulo>La teoría del Shock</titulo>
-        		
+                
         <autor>Naomi Klein</autor>
-        		
+                
         <editorial>Planeta</editorial>
-        		
+                
         <paginas>600</paginas>
-        	
+            
     </libro>
     
     <libro>
-        <titulo>Verdades a la cara: Recuerdo de los aÃ±os salvajes</titulo>
-        <autor>Pablo Iglesias TurriÃ³n</autor>
-        <editor>
-            Navona
-            <pais>EspaÃ±a</pais>
-        </editor>
-        <paginas>320</paginas>
+        <titulo>884545</titulo>
+        <autor>666</autor>
+        <editorial>555</editorial>
+        <paginas>555</paginas>
     </libro>
 </biblioteca>
