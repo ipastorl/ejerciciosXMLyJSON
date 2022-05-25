@@ -23,6 +23,12 @@ public class Ejercicio3 {
         List<Office> oficinas = mostrarOficinas();
         // mostrar por pantalla en formato json
         System.out.println(new Gson().toJson(oficinas));
+
+        // Otra forma de hacerlo
+        Gson g = new Gson();
+        Type listType = new TypeToken<ArrayList<Office>>() {}.getType();
+        System.out.println(g.toJson(oficinas,listType));
+
     }
 
     private static List<Office> mostrarOficinas() {
