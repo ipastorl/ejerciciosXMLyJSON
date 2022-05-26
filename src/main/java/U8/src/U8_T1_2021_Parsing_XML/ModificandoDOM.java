@@ -94,7 +94,7 @@ public class ModificandoDOM {
             DOMSource origenDOM = new DOMSource(root);
 
             //Creación del fichero que va a ser mi destino
-            File nuevoFood = new File("C:\\Users\\issa2\\OneDrive\\Documentos\\DAW\\PROGRAMACION\\daw2021\\U8\\src\\U8_T1_2021_Parsing_XML\\ejercicio2.xml");
+            File nuevoFood = new File("C:\\Users\\issa2\\OneDrive\\Documentos\\DAW\\PROGRAMACION\\daw2021\\U8\\src\\U8_T1_2021_Parsing_XML\\RecorridoStax.xml");
             StreamResult destino = new StreamResult(nuevoFood);
 
             //Hacemos la transformación que en nuestro caso es la escritura

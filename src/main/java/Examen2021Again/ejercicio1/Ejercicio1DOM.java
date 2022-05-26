@@ -21,7 +21,7 @@ import java.util.Scanner;
 /**
  * Añada un nuevo libro a la biblioteca solicitando los datos al usuario.
  * Inserte un nuevo nodo dentro de editorial que indique el país de origen de la editorial.
- * Escriba todo esto en un fichero llamado ejercicio2.xml
+ * Escriba todo esto en un fichero llamado RecorridoStax.xml
  */
 public class Ejercicio1DOM {
 
@@ -30,7 +30,7 @@ public class Ejercicio1DOM {
         try{
             Libro libro = createLibro();
             String ficheroxml = "libros.xml";
-            String ficheroSalida = "ejercicio2.xml";
+            String ficheroSalida = "RecorridoStax.xml";
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(new File(ficheroxml));

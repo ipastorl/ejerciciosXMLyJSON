@@ -22,7 +22,7 @@ import java.util.Scanner;
  * Que muestre por pantalla el número de libros de una editorial determinada que se solicitará al usuario.
  */
 public class ParserStax {
-    public static String archivo = "ejercicio2.xml";
+    public static String archivo = "RecorridoStax.xml";
     public static void main(String[] args) {
 
         // primeros pasos: crear una Lista libros, un objeto Libro vacío y el nombre de una etiqueta vacía (String)
